@@ -1,0 +1,10 @@
+.split-parent {
+  width: 100%;
+}
+
+.split-line,
+.split-word,
+.split-char {
+  display: inline-block;
+  will-change: transform, opacity;
+}

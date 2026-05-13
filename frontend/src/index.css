@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(75, 111, 168, 0.28), transparent 35%),
+    linear-gradient(180deg, #07111c 0%, #0b1523 100%);
+  color: #d7e0ea;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  margin: 0;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(99, 179, 237, 0.3);
+}
