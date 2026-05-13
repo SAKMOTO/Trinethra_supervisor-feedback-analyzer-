@@ -1,10 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
+import customerServiceWebp from "./assets/Customer service.webp";
+import onlineShoppingWebp from "./assets/Online shopping.webp";
+import reviewsWebp from "./assets/Reviews.webp";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:5050";
 
 function App() {
   return <AppContent />;
+}
+
+function AnimationImage({ src, alt, className }) {
+  return <img src={src} alt={alt} className={className} loading="eager" decoding="async" />;
 }
 
 function AppContent() {
@@ -112,6 +119,9 @@ function AppContent() {
             Local Ollama-backed analysis with rubric-guided guardrails, direct evidence quotes, KPI mapping,
             gap detection, and follow-up questions for the psychology intern.
           </p>
+          <div className="hero-lottie" aria-hidden="true">
+            <AnimationImage src={customerServiceWebp} alt="Customer service animation" className="lottie lottie-hero" />
+          </div>
         </div>
         <div className="hero-note">
           <strong>Hallucination guardrails</strong>
@@ -133,6 +143,10 @@ function AppContent() {
             <button className="secondary-button" onClick={analyzeTranscript} disabled={loading}>
               {loading ? "Running..." : "Run Analysis"}
             </button>
+          </div>
+
+          <div className="panel-lottie" aria-hidden="true">
+            <AnimationImage src={onlineShoppingWebp} alt="Online shopping animation" className="lottie lottie-panel" />
           </div>
 
           <div className="sample-row">
@@ -224,6 +238,10 @@ function AppContent() {
               <span className="badge">{responseMeta?.status ?? "idle"}</span>
               <span className="badge muted">{responseMeta?.model ?? "ollama"}</span>
             </div>
+          </div>
+
+          <div className="panel-lottie panel-lottie-output" aria-hidden="true">
+            <AnimationImage src={reviewsWebp} alt="Reviews animation" className="lottie lottie-panel" />
           </div>
 
           <div className="score-card">
